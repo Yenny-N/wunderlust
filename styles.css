@@ -1,7 +1,34 @@
+/* CSS by Yen Nguyen*/
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+
+:root {
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+.molle-regular-italic {
+    font-family: "Molle", cursive;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -22,4 +49,327 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Wunderlust Majorca Branding */
+h1, h2, h3 {
+    font-family: "Molle", cursive;
+}
+
+h4, p, q, small, nav, button, form {
+    font-family: "Monsterrat", sans-serif;
+}
+
+/* ---------Body--------- */
+body a {
+    text-decoration: none;
+}
+
+/* ---------Header--------- */
+header {
+    background: linear-gradient(#55BCD5, #FFFFFF);
+}
+
+header a {
+    text-decoration: none;
+}
+
+.sr-only {
+    display: none;
+}
+
+nav {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;    
+}
+
+nav a {
+    font-weight: bold;
+    text-transform: uppercase ;
+    
+}
+
+nav ul {
+    display: flex;
+    background-color: var(--teal);
+    flex-direction: column;
+    text-align: center;
+    color: var(--black);
+}
+
+nav li {
+    padding: 15px;
+}
+
+#menu-toggle {
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+#menu-toggle input {
+    
+}
+
+/* ---------Main--------- */
+main {
+    display: block;
+    justify-content: center;
+}
+
+p {
+    font-size: 1em;
+    padding: 30px;
+    padding-top: 5px;
+    line-height: 20px;
+}
+
+q {
+    font-size: 1em;
+    font-style: italic;
+}
+
+h1 {
+    font-size: 3em;
+    padding: 30px;
+    padding-bottom: 5px;
+}
+
+h3, h2 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    font-size: 2.5em;   
+}
+
+#intro img {
+    width: 100%;
+}
+
+/* PLAN YOUR TRIP */
+
+#plan {
+    display: block;
+    align-content: center;
+    background-color: var(--yellow);
+    margin: auto;
+}
+
+#plan div {
+    display: block;
+    justify-items: center;
+    margin: auto;
+    padding: 10px;
+}
+
+#plan section {
+    display: block;
+    background-color: var(--teal);
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    margin: 20px;
+    width: 70%;
+    border-radius: 10px;
+    border: solid;
+    border-color: var(--white);
+}
+
+#plan h4 {
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* TESTIMONIALS */
+#testimonials {
+    display: block;
+    text-align: center;
+}
+
+#testimonials h4 {
+    text-transform: uppercase;
+    
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-top: 15px;
+}
+
+#testimonials section{
+    padding: 15px;
+}
+
+/* ABOUT YOUR DESTINATION */
+#about {
+    background-color: var(--blue);
+}
+
+#about h4 {
+    text-transform: uppercase;
+    padding-top: 15px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#about div {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    justify-content: center;
+    padding: 10px;
+}
+
+#about section {
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+
+/* CONTACT */
+h3{
+    display: flex;
+    width: 100%;
+}
+
+h3 span{
+    font-family: "Monsterrat", sans-serif;
+    font-size: 0.5em;
+    padding: 5px;
+    padding-left: 20px;
+}
+
+form {
+    display: block;
+    padding: 30px;
+}
+
+input {
+    width: 90%;
+    height: 50px;
+}
+
+legend {
+    display: flex;
+}
+
+fieldset {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+fieldset label {
+    display: inline-flex;
+    padding: 0px;
+    margin-right: 100px;
+    margin-left: 0px;
+}
+
+fieldset span{
+    align-content: center;
+    justify-items: center;
+}
+
+legend {
+    display: flex;
+}
+
+input, label, fieldset {
+    text-transform: uppercase;
+    display: block;
+    border-color: var(--purple);
+    padding: 30px, 5px;
+    margin: 15px;
+}
+
+input[type="radio"] {
+    height: 10px;
+    accent-color: var(--purple);
+}
+
+#prefPhone, #prefText, #prefEmail {
+    height: 50px;
+    width: 50px;
+    margin-left: 0px;
+    border: solid;
+}
+
+label .radio-input {
+    margin: auto;
+    
+}
+
+.radio-label {
+    font-size: 1em;
+    text-transform: none;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#selects select {
+    height: 50px;
+    width: 92%;
+    border: solid;
+    border-color: var(--purple);
+}
+
+.custom-select {
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 100%;
+    align-content: center;
+}
+
+.travelTime, .destination {
+    border: solid;
+    accent-color: var(--purple);
+}
+
+#mySubmit {
+    width: 92%;
+    font-weight: bold;
+    background-color: var(--purple);
+    color: var(--white);
+}
+/* ---------Footer--------- */
+footer {
+    text-align: center;
+    display: block;
+    background-color: var(--light-gray);
+    padding: 20px;
+}
+
+footer a {
+    display: block;
+    text-align: center;
+    padding: 10px;
 }
