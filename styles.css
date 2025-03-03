@@ -92,6 +92,8 @@ h4, p, q, small, nav, button, form {
 
 /* ---------Header--------- */
 header {
+    margin-top: -16px;
+    padding-top: 15px;
     background: linear-gradient(#55BCD5, #FFFFFF);
 }
 
@@ -127,23 +129,27 @@ nav ul {
 
 nav li {
     padding: 35px;
-    border: solid thin;
+    border-bottom: solid thin;
     border-color: var(--dark-gray);
 }
 
 #menu-toggle {
-    position: relative;
+    position: absolute;
+    top: 15px;
+    right: 0px;
     display: block;
     z-index: 1;
+    width: 250px;
 }
 
 #menu-toggle input {
     display: none;
+    position: absolute;
 }
 
 #menu-toggle label {
-    background-color: var(--dark-gray);
-    color: var(--white);
+    background-color: var(--yellow);
+    color: var(--black);
     display: block;
     padding: 20px 0px;
     margin: 0;
@@ -172,7 +178,15 @@ nav li {
 #menu-toggle input:checked ~ ul {
     opacity: 1;
     visibility: visible;
+    position: absolute;
 }
+
+#menu-toggle input:checked ~ label {
+    background-color: var(--dark-gray);
+    color: var(--white);
+
+}
+
 /* ---------Main--------- */
 main {
     display: block;
@@ -329,7 +343,7 @@ fieldset {
 fieldset label {
     display: inline-flex;
     padding: 0px;
-    margin-right: 100px;
+    margin-right: 150px;
     margin-left: 0px;
 }
 
@@ -412,4 +426,27 @@ footer a {
     display: block;
     text-align: center;
     padding: 10px;
+    text-decoration: none;
+    color: var(--dark-gray);
+}
+
+@media only screen and (max-width: 428px){
+    #menu-toggle input:checked ~ ul {
+        display: flex;
+        width: 500px;
+    }
+    
+    #menu-toggle input:checked ~ label {
+        background-color: var(--dark-gray);
+        color: var(--white);
+    
+    }    
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+}
+
+@media only screen and (min-width: 1280) {
+
 }
