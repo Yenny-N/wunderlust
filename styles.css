@@ -84,12 +84,22 @@ h4, p, q, small, nav, button, form {
     font-family: "Monsterrat", sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* ---------Body--------- */
 #skip {
     text-decoration: none;
     opacity: 0;
 }
 
+html, body {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
 /* ---------Header--------- */
 header {
     margin-top: -16px;
@@ -106,7 +116,7 @@ header a {
 }
 
 nav {
-    width: 100%;
+    width: 100vw;
     display: block;
     justify-content: center;
     align-items: flex-start;
@@ -212,14 +222,15 @@ h1 {
 }
 
 h3, h2 {
-    display: flex;
+    display: block;
     flex-wrap: wrap;
+    font-size: 2.5em;
     padding: 30px;
-    font-size: 2.5em;   
+    padding-right: 0px;   
 }
 
 #intro img {
-    width: 100%;
+    width: 100vw;
 }
 
 /* PLAN YOUR TRIP */
@@ -229,6 +240,7 @@ h3, h2 {
     align-content: center;
     background-color: var(--yellow);
     margin: auto;
+    max-width: 100vw;
 }
 
 #plan div {
@@ -278,6 +290,7 @@ h3, h2 {
 
 /* ABOUT YOUR DESTINATION */
 #about {
+    width: 100vw;
     background-color: var(--blue);
 }
 
@@ -303,7 +316,7 @@ h3, h2 {
 }
 
 #about img {
-    height: 50%;
+    height: 40%;
     padding: 10px;
 }
 
@@ -323,6 +336,7 @@ h3 span{
 form {
     display: block;
     padding: 30px;
+    justify-content: center;
 }
 
 input {
@@ -430,20 +444,139 @@ footer a {
     color: var(--dark-gray);
 }
 
-@media only screen and (max-width: 428px){
-    #menu-toggle input:checked ~ ul {
-        display: flex;
-        width: 500px;
-    }
-    
-    #menu-toggle input:checked ~ label {
-        background-color: var(--dark-gray);
-        color: var(--white);
-    
-    }    
+@media only screen and (max-width: 428px) {
+
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
+@media only screen and (min-width: 600px) and (max-width: 1024px) { 
+h3 {
+    flex-grow: none;
+    flex-shrink: 0;
+    max-width: 95%;
+}
+
+header {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: "box 4";
+    padding-bottom: 80px;
+}
+
+header a {
+    grid-row-end: span 2;
+}
+
+header p {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#menu-toggle {
+    position: relative;
+    grid-column: auto;
+    align-items: center;
+    width: 100%;
+}
+nav {
+    display: block;
+    width: 90%;
+    padding: 30px;
+    background-color: transparent;
+    grid-column: 1 / span 2;
+    place-self: center;
+}
+#menu-toggle ul {
+    opacity: 1; 
+    background-color: transparent;
+    z-index: 200;
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+#menu-toggle li {
+    background-color: var(--white);
+    padding: 15px;
+    width: 20%;
+    margin: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+}
+
+#menu-toggle label {
+    display: none;
+}
+
+#menu-toggle li:hover {
+    background-color: var(--yellow);
+}
+
+#img-grid{
+    display: grid;
+    max-width: 100vw;
+    padding: 30px;
+    padding-top: 10px;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+#img-grid img{
+    width: 100%;
+}
+
+picture {
+    grid-column: 1 / span 2;
+}
+
+
+#plan div {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#testimonials div {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#about section {
+    padding: 10px;
+    flex-grow: 0;
+}
+
+#about div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#about p {
+    padding: 0px;
+    padding-top: 10px;
+}
+
+#contact form{
+    display: block;
+    justify-content: center;
+}
+
+fieldset label {
+    margin-right: 10%;
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#mySubmit {
+    position: relative;
+    width: 200px;
+    margin-left: 70%;
+}
 
 }
 
