@@ -25,7 +25,6 @@
 
 .montserrat {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
@@ -374,7 +373,7 @@ input, label, fieldset {
     text-transform: uppercase;
     display: block;
     border-color: var(--purple);
-    padding: 30px, 5px;
+    padding: 30px 5px;
     margin: 15px;
 }
 
@@ -450,7 +449,7 @@ footer a {
 
 @media only screen and (min-width: 600px) and (max-width: 1024px) { 
 h3 {
-    flex-grow: none;
+    flex-grow: 0;
     flex-shrink: 0;
     max-width: 95%;
 }
@@ -784,7 +783,7 @@ footer {
     padding: 30px;
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr ;
-    grid-template-areas: "box 1", "box 5", "box6";
+    grid-template-areas: "box 1" "box 5" "box6";
 }
 
 footer p {
